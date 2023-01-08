@@ -268,9 +268,6 @@ function draw_factory(x, y, resource, focus) {
     vertex(-10, 4);
     vertex(-10, -4);
     endShape();
-    pop();
-    draw_resource(x, y, resource);
-    return;
     // circle(0, 0, 5);
     stroke(0, 0, 0);
     if (fact != 0 && generated_last_update[resource] == true) {
@@ -485,7 +482,7 @@ function draw() {
                 }
             }
         }
-        if (valid || true) {
+        if (valid) {
             let focus = false;
             if (sqrt(pow(mouse[0] - x, 2) + pow(mouse[1] - y, 2)) < 5) {
                 focus = true;
